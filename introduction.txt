@@ -1,0 +1,44 @@
+Python - high level, general purpose, interpreted programming language
+release year - 1991
+created by - Guido Van Rossum
+execution style - line by line
+Versions :
+1.0 - 1991 (fundamental programming - data types and functions)
+2.0 - 2000 (list comprehension, garbage collection, unicode support)
+3.0 - 2008 (better syntax and consistency)
+3.6 to 3.10 - 2016 to 2021 (f-strings, async features)
+3.11 - 2022
+3.12 - 2025
+
+Features :
+1. Simple syntax
+2. Interpreted language
+3. Cross-platform compatibility
+4. Open source
+5. Multi paradigm support
+6. Dynamic typing
+7. Extensive libraries
+
+Application :
+1. Web development
+2. Data science and data analytics
+3. Machine Leaning and AI
+4. Automation and scripting
+5. Game development
+6. Application development
+
+Installation and Setting Up of Python 
+Steps to Install Python 
+To begin programming in Python: 
+● Go to the official website: python.org 
+● Download the latest version for your operating system. 
+● Launch the installer and ensure you check the "Add Python to PATH" option. 
+● Open your terminal or command prompt and type:
+python --version
+
+Python Virtual Environment
+A virtual environment is an isolated Python workspace that helps manage dependencies for different projects. It ensures that packages for one project do not interfere with another.
+creating vitual env - python -m venv env_name
+activating virtual env - env_name/Scripts/activate
+installing new packages - pip install package_name
+deactivating - deactivate
