@@ -47,5 +47,3 @@ b = 10
 print(id(a))
 b = b + 10
 print(id(b))
-
-
