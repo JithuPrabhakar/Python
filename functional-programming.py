@@ -127,3 +127,62 @@ class Count:
     
 # for num in Count(2,6):
 #     print(num)
+
+# Decorator - function that modify the behaviour of another function
+def decorator(func): 
+    def wrapper(): 
+        print("Before function") 
+        func() 
+        print("After function") 
+        func()
+        print("After function") 
+    return wrapper 
+ 
+@decorator 
+def say_hello(): 
+    print("Hello") 
+ 
+# say_hello()
+
+# Class Decorator - function that takes a class as input, modifies and enhances it and returns the updated class
+# Class decorator that adds a  greet() method to any class 
+def add_greet_method(cls): 
+    def greet(self): 
+        print("Hello from", self.__class__.__name__) 
+    cls.greet = greet 
+    return cls 
+ 
+@add_greet_method 
+class Person: 
+    def __init__(self, name): 
+        self.name = name 
+
+p = Person("Akhil")
+# p.greet()
+
+# Method decorator - enhances a method inside a class
+def log_method(func): 
+    def wrapper(*args, **kwargs): 
+        print(f"Calling {func.__name__}") 
+        return func(*args, **kwargs) 
+    return wrapper 
+
+class Demo: 
+    @log_method 
+    def say_hello(self): 
+        print("Hello!") 
+ 
+d = Demo() 
+# d.say_hello()
+
+
+'''
+Given a list of strings, filter out all words that have fewer than 5 characters or do not start with an uppercase letter
+'''
+words = ["Apple", "banana", "Cherry", "dog", "Elephant", "Fig"]
+
+'''
+find the product of all positive numbers in a list.
+'''
+numbers = [2, -3, 4, -1, 5, 0]
+# product = reduce(lambda x,y : x * y, list(filter(lambda i : i > 0), numbers))
